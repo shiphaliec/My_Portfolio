@@ -1,0 +1,80 @@
+.galleryMain {
+  padding: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--text);
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.backLink {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.title {
+  flex: 1 1 auto;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.imageStrip {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0.25rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.imageFigure {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.galleryImage {
+  display: block;
+  height: 360px;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.note {
+  margin-top: 0.75rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* scrollbar tweaks */
+.imageStrip::-webkit-scrollbar {
+  height: 10px;
+}
+.imageStrip::-webkit-scrollbar-thumb {
+  background: var(--accent-light);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+@media (max-width: 768px) {
+  .galleryImage {
+    height: 220px;
+  }
+}
